@@ -1,2 +1,2 @@
-# quackquack.github.io
+# quackquack
 Duck "AI" :D
