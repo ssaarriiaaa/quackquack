@@ -1,2 +1,2 @@
 # quackquack
-Requested duck "AI"
+Duck "AI" :D
