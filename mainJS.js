@@ -11,7 +11,11 @@ responses = [
     "qqqqquuuuuaaaaaccckkkkkkk....",
     ".............quack!",
     "quackkkkkkkkkkkkkkkk...",
-    "𓅭𓅭𓅭𓅭𓅭𓅭𓅭"  
+    "𓅭𓅭𓅭𓅭𓅭𓅭𓅭" ,
+    "qua-",
+    "quack?",
+    "meow.",
+    ""
 ]
 
 function output(input) {
@@ -29,26 +33,24 @@ function addChatEntry(input, product) {
     userDiv.innerHTML = `${input}`;
     messagesContainer.appendChild(userDiv);
    
-    let botDiv = document.createElement("div");
-    let botText = document.createElement("span");
-    botDiv.id = "bot";
-    botDiv.className = "bot response";
-    botText.innerText = "Typing...";
-    botDiv.appendChild(botText);
-    messagesContainer.appendChild(botDiv);
+    let duckDiv = document.createElement("div");
+    let duckText = document.createElement("span");
+    duckDiv.id = "duck";
+    duckDiv.className = "duck response";
+    duckText.innerText = "Preparing the quack...";
+    duckDiv.appendChild(duckText);
+    messagesContainer.appendChild(duckDiv);
    
     setTimeout(() => {
-      botText.innerText = `${product}`;
+      duckText.innerText = `${product}`;
     }, 2000); 
 }
 
-
-
-//const inputField = document.getElementById("input")
-//    inputField.addEventListener("keydown", function(e) {
-//        if (e.code === "Enter") {
-//            let input = inputField.value;
-//            inputField.value = "";
-//            output(input);
-//    }
-//  });
+const inputField = document.getElementById("input")
+   inputField.addEventListener("keydown", function(e) {
+       if (e.code === "Enter") {
+           let input = inputField.value;
+           inputField.value = "";
+           output(input);
+   }
+ });
