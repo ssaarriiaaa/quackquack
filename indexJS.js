@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let input = inputField.value;
             if (input.trim() !== "") {
                 inputField.value = "";
-                output(input);
+                output("You: " + input);
             }
         }
     });
@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
         let duckDiv = document.createElement("div");
         let duckText = document.createElement("span");
         duckDiv.className = "duck response";
-        duckText.innerText = "Preparing the quack...";
+        duckText.innerText = "Duck: ...";
         duckDiv.appendChild(duckText);
         messagesContainer.appendChild(duckDiv);
+        
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
         setTimeout(() => {
             duckText.innerText = product;
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function output(input) {
-        let product = responses[Math.floor(Math.random() * responses.length)];
+        let product = "Duck: " + responses[Math.floor(Math.random() * responses.length)];
         addChatEntry(input, product);
     }
 
@@ -52,5 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "qua-",
         "quack?",
         "meow.",
+        "quackity quack quack",
+        "*looks at you judgingly*",
+        "HONK"
     ];
 });

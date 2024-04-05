@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+   
     <meta charset="UTF-8">
     <title>quackquack</title>
     <script src="indexJS.js"></script>
@@ -27,6 +32,22 @@
                 border: solid 3px #d8cbaf;
                 border-radius: 5px;
             }
+            
+            #inputCover {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                overflow: scroll;
+                height: 6%;
+                width: auto;
+                background-color: #ebe6d9;
+                padding: 15px;
+                margin: 20px;
+                border-radius: 5px;
+            }
 
             #messages {
                 position: fixed;
@@ -36,25 +57,35 @@
                 display: flex;
                 flex-direction: column;
                 overflow: scroll;
-                height: 60%;
+                height: 50%;
                 width: auto;
                 background-color: #ebe6d9;
                 padding: 15px;
+                padding-bottom: 85px;
                 margin: 20px;
                 border-radius: 5px;
             }
+            
+            .user, .duck span, .duck {
+                background-color: #ebe6d9;
+                color: #342c1d;
+                font-family: "Nunito", sans-serif;
+                font-size: 18px;
+/*                weight: 200 - 100*/
+                font-weight: 500;
+                font-style: normal;
+            }
         }
 
-        /*
+        
         @media all and (min-width: 900px) {
             #input {
                 position: fixed;
                 bottom: 45px;
-                left: 0;
                 right: 0;
-                margin: auto;
+                margin-right: 4.44%;
 
-                width: 80%;
+                width: 35%;
                 line-height: 25px;
                 padding-left: 5px;
                 padding-right: 5px;
@@ -62,29 +93,58 @@
                 border: solid 3px #d8cbaf;
                 border-radius: 5px;
             }
-
-            #messages {
+            
+            #inputCover {
                 position: fixed;
                 bottom: 0;
                 right: 0;
-                left: 0;
                 display: flex;
                 flex-direction: column;
                 overflow: scroll;
-                height: 60%;
-                width: auto;
+                height: 6%;
+                width: 40%;
                 background-color: #ebe6d9;
                 padding: 15px;
                 margin: 20px;
                 border-radius: 5px;
             }
+
+            #messages {
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                overflow: scroll;
+                height: auto;
+                width: 40%;
+                background-color: #ebe6d9;
+                padding: 15px;
+                padding-bottom: 85px;
+                margin: 20px;
+                border-radius: 5px;
+            }
+            
+            .user, .duck span, .duck {
+                background-color: #ebe6d9;
+                color: #342c1d;
+                font-family: "Nunito", sans-serif;
+                font-size: 18px;
+/*                weight: 200 - 100*/
+                font-weight: 500;
+                font-style: normal;
+            }
         }
-*/
+
     </style>
 </head>
 
 <body>
     <div id="messages"></div>
-
+    
+    <div id="inputCover"></div>
+    
     <input id="input" type="text" placeholder="quack quack?" autocomplete="off" autofocus="true">
+    
 </body></html>
