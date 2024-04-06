@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputField = document.getElementById("input");
     const messagesContainer = document.getElementById("messages");
     const imgReplace = document.getElementById("duckIMG");
-
+    
     inputField.addEventListener("keydown", function(e) {
         if (e.code === "Enter") {
             let input = inputField.value;
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         let userDiv = document.createElement("div");
         userDiv.className = "user response";
         userDiv.innerHTML = input;
-        messagesContainer.appendChild(userDiv);
+        messagesContainer.insertBefore(userDiv, document.getElementById("inputCover"));
 
         let duckDiv = document.createElement("div");
         let duckText = document.createElement("span");
         duckDiv.className = "duck response";
         duckText.innerText = "Duck: ...";
         duckDiv.appendChild(duckText);
-        messagesContainer.appendChild(duckDiv);
+        messagesContainer.insertBefore(duckDiv, document.getElementById("inputCover"));
         
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
 

@@ -13,7 +13,7 @@
         * {
             margin: 0;
             padding: 0;
-            background-color: #d8cbaf
+            background-color: #d8cbaf;
         }
 
         @media all and (max-device-width: 1000px) {
@@ -23,7 +23,6 @@
                 left: 0;
                 right: 0;
                 margin: auto;
-
                 width: 80%;
                 line-height: 25px;
                 padding-left: 5px;
@@ -57,7 +56,7 @@
                 display: flex;
                 flex-direction: column;
                 overflow: scroll;
-                height: 50%;
+                height: 50vh;
                 width: auto;
                 background-color: #ebe6d9;
                 padding: 15px;
@@ -76,10 +75,10 @@
                 font-style: normal;
             }
             
-            img {
+            #duckIMG {
                 display: block;
-                height: 20vh;
-                width: auto;
+                height: auto;
+                width: 55vh;
                 left: 0;
                 right: 0;
                 margin: auto;
@@ -92,9 +91,6 @@
             #input {
                 position: fixed;
                 bottom: 45px;
-                right: 0;
-                margin-right: 4.44%;
-
                 width: 35%;
                 line-height: 25px;
                 padding-left: 5px;
@@ -109,8 +105,7 @@
                 bottom: 0;
                 right: 0;
                 display: flex;
-                flex-direction: column;
-                overflow: scroll;
+                justify-content: center;
                 height: 6%;
                 width: 40%;
                 background-color: #ebe6d9;
@@ -128,7 +123,7 @@
                 flex-direction: column;
                 overflow: scroll;
                 height: auto;
-                width: 40%;
+                width: 40vw;
                 background-color: #ebe6d9;
                 padding: 15px;
                 padding-bottom: 85px;
@@ -141,17 +136,22 @@
                 color: #342c1d;
                 font-family: "Nunito", sans-serif;
                 font-size: 1em;
-/*                weight: 200 - 100*/
+/*                weight: 200 - 1000*/
                 font-weight: 500;
                 font-style: normal;
             }
             
-            img {
+            #duckIMG {
                 display: block;
                 height: auto;
-                width: 85vh;
-                margin-top: 15%;
-                margin-left: 3%;
+                width: 44vw;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 5vw;
+                
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%); /* center vertically */
             }
         }
 
@@ -161,9 +161,9 @@
 <body>
     <img id="duckIMG" src=default_duck.png alt="duck!">
     
-    <div id="messages"></div>
-    
-    <div id="inputCover"></div>
-    
-    <input id="input" type="text" placeholder="quack quack?" autocomplete="off" autofocus="true">
+    <div id="messages">
+        <div id="inputCover">
+            <input id="input" type="text" placeholder="quack quack?" autocomplete="off" autofocus="true">
+        </div>
+    </div>
 </body></html>
