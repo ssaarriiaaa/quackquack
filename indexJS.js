@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const imgReplace = document.getElementById("duckIMG");
     
     inputField.addEventListener("keydown", function(e) {
-        if (e.code === 13) {
+        if (e.code === "Enter") {
             let input = inputField.value;
             if (input.trim() !== "") {
                 inputField.value = "";
