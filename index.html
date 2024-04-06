@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
    
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quackquack</title>
     <script src="indexJS.js"></script>
     <style>
@@ -16,7 +16,7 @@
             background-color: #d8cbaf
         }
 
-        @media all and (max-width: 900px) {
+        @media all and (max-device-width: 1000px) {
             #input {
                 position: fixed;
                 bottom: 45px;
@@ -75,10 +75,20 @@
                 font-weight: 500;
                 font-style: normal;
             }
+            
+            img {
+                display: block;
+                height: 30vh;
+                width: auto;
+                left: 0;
+                right: 0;
+                margin: auto;
+                margin-top: 20px;
+            }
         }
 
         
-        @media all and (min-width: 900px) {
+        @media all and (min-device-width: 1000px) {
             #input {
                 position: fixed;
                 bottom: 45px;
@@ -130,10 +140,18 @@
                 background-color: #ebe6d9;
                 color: #342c1d;
                 font-family: "Nunito", sans-serif;
-                font-size: 18px;
+                font-size: 1em;
 /*                weight: 200 - 100*/
                 font-weight: 500;
                 font-style: normal;
+            }
+            
+            img {
+                display: block;
+                height: auto;
+                width: 85vh;
+                margin-top: 15%;
+                margin-left: 3%;
             }
         }
 
@@ -141,10 +159,11 @@
 </head>
 
 <body>
+    <img id="duckIMG" src=default_duck.png alt="duck!">
+    
     <div id="messages"></div>
     
     <div id="inputCover"></div>
     
     <input id="input" type="text" placeholder="quack quack?" autocomplete="off" autofocus="true">
-    
 </body></html>

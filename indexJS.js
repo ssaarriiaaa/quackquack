@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const inputField = document.getElementById("input");
     const messagesContainer = document.getElementById("messages");
+    const imgReplace = document.getElementById("duckIMG");
 
     inputField.addEventListener("keydown", function(e) {
         if (e.code === "Enter") {
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(() => {
             duckText.innerText = product;
+            imgReplace.src = duckGIFS[Math.floor(Math.random() * duckGIFS.length)];
         }, 500);
     }
 
@@ -57,5 +59,12 @@ document.addEventListener("DOMContentLoaded", function() {
         "quackity quack quack",
         "*looks at you judgingly*",
         "HONK"
+    ];
+    
+    const duckGIFS = [
+        "angry_duck.gif",
+        "disgusted_duck.gif",
+        "happy_duck.gif",
+        "sad_duck.gif"
     ];
 });
